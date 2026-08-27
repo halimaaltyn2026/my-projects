@@ -26,5 +26,6 @@ Welcome to my repository! Here I share the projects I have built while learning 
 ### 4. 🛒 E-Commerce Store (Coming Soon)
 - **Description:** An online shop built with Vue.js.
 - **Status:** Planning
-  [![Flags](https://flagcounter.com)](https://flagcounter.com)
+  
+<a href="https://flagcounter.com"><img src="https://flagcounter.com" alt="Flag Counter" border="0"></a>
 

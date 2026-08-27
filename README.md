@@ -27,5 +27,6 @@ Welcome to my repository! Here I share the projects I have built while learning 
 - **Description:** An online shop built with Vue.js.
 - **Status:** Planning
   
-<a href="https://flagcounter.com"><img src="https://flagcounter.com" alt="Flag Counter" border="0"></a>
+
+[![Flags](https://flagcounter.com)](https://flagcounter.com)
 

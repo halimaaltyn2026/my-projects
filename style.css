@@ -1,0 +1,88 @@
+/* --- СТИЛИ ДЛЯ СТРАНИЦЫ БЛОГА --- */
+
+.form-section {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+#blog-form input, 
+#blog-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#blog-form input:focus, 
+#blog-form textarea:focus {
+    border-color: #007bff;
+}
+
+#blog-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#blog-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#blog-form button:hover {
+    background-color: #0056b3;
+}
+
+#blog-form button:active {
+    transform: scale(0.98);
+}
+
+/* --- СТИЛИ ДЛЯ ЛЕНТЫ ПОСТОВ --- */
+.posts-section {
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.post {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #eef2f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.post h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.post p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}

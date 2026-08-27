@@ -26,3 +26,5 @@ Welcome to my repository! Here I share the projects I have built while learning 
 ### 4. 🛒 E-Commerce Store (Coming Soon)
 - **Description:** An online shop built with Vue.js.
 - **Status:** Planning
+- 
+![Visitor Count](https://seeyoufarm.com)

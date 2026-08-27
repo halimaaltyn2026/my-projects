@@ -9,7 +9,6 @@ const tips = [
     "Лучший способ закрепить теорию — сразу применить её на практике."
 ];
 
-// Проверяем, есть ли кнопка на этой странице, чтобы код не выдавал ошибку
 if (btn && message) {
     btn.addEventListener('click', () => {
         const randomIndex = Math.floor(Math.random() * tips.length);
@@ -18,16 +17,60 @@ if (btn && message) {
 }
 
 
-// === КОД ДЛЯ БЛОГА (Страница blog.html) ===
+// === КОД ДЛЯ БЛОГА С СОХРАНЕНИЕМ И УДАЛЕНИЕМ (Страница blog.html) ===
 const blogForm = document.getElementById('blog-form');
 const titleInput = document.getElementById('post-title'); 
 const textInput = document.getElementById('post-text');
 const postsContainer = document.getElementById('posts-container');
 
-// Проверяем, есть ли форма блога на этой странице
 if (blogForm) {
+    // Получаем массив сохраненных постов из памяти браузера
+    let savedPosts = JSON.parse(localStorage.getItem('myBlogPosts')) || [];
+
+    // ФУНКЦИЯ ДЛЯ ОТРИСОВКИ ОДНОГО ПОСТА С КНОПКОЙ УДАЛЕНИЯ
+    function renderPost(title, text, index) {
+        const newPost = document.createElement('div');
+        newPost.classList.add('post');
+        
+        // Вставляем текст и кнопку удаления. Кнопке даем индекс этого поста
+        newPost.innerHTML = `
+            <h3>${title}</h3>
+            <p>${text}</p>
+            <button class="delete-btn" data-index="${index}">Удалить</button>
+        `;
+        
+        // Находим кнопку удаления внутри только что созданного поста
+        const deleteBtn = newPost.querySelector('.delete-btn');
+        deleteBtn.addEventListener('click', function() {
+            // Удаляем пост из массива по его индексу
+            savedPosts.splice(index, 1);
+            // Перезаписываем обновленный массив в память
+            localStorage.setItem('myBlogPosts', JSON.stringify(savedPosts));
+            // Перерисовываем всю ленту заново, чтобы индексы обновились
+            refreshPosts();
+        });
+
+        postsContainer.insertBefore(newPost, postsContainer.firstChild);
+    }
+
+    // ФУНКЦИЯ ДЛЯ ПОЛНОЙ ПЕРЕРИСОВКИ ЛЕНТЫ
+    function refreshPosts() {
+        // Очищаем контейнер, кроме самого первого статичного поста, если нужно.
+        // Чтобы очистить абсолютно всё динамическое:
+        postsContainer.innerHTML = '';
+        
+        // Выводим каждый пост из памяти заново с правильными номерами (индексами)
+        savedPosts.forEach((post, idx) => {
+            renderPost(post.title, post.text, idx);
+        });
+    }
+
+    // Запускаем отрисовку сохраненных постов при первой загрузке страницы
+    refreshPosts();
+
+    // ОБРАБОТКА ФОРМЫ (Публикация)
     blogForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Останавливаем перезагрузку страницы
+        e.preventDefault(); 
 
         const titleValue = titleInput.value.trim();
         const textValue = textInput.value.trim();
@@ -37,19 +80,15 @@ if (blogForm) {
             return;
         }
 
-        // Создаем новый пост
-        const newPost = document.createElement('div');
-        newPost.classList.add('post');
+        // Добавляем новый объект поста в наш массив
+        savedPosts.push({ title: titleValue, text: textValue });
+        // Сохраняем обновленный массив в localStorage
+        localStorage.setItem('myBlogPosts', JSON.stringify(savedPosts));
 
-        newPost.innerHTML = `
-            <h3>${titleValue}</h3>
-            <p>${textValue}</p>
-        `;
+        // Обновляем ленту на экране
+        refreshPosts();
 
-        // Добавляем пост наверх ленты
-        postsContainer.insertBefore(newPost, postsContainer.firstChild);
-
-        // Очищаем форму
+        // Очищаем поля ввода
         titleInput.value = "";
         textInput.value = "";
     });

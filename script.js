@@ -1,95 +1,202 @@
-// === КОД ДЛЯ КНОПКИ СОВЕТОВ (Главная страница) ===
-const btn = document.getElementById('magicBtn');
-const message = document.getElementById('magicMessage');
 
-const tips = [
-    "Пишите чистый код и не забывайте оставлять комментарии.",
-    "Регулярно делайте коммиты в Git, разделяя задачи.",
-    "Ошибки в консоли — это не провал, а инструмент поиска решений.",
-    "Лучший способ закрепить теорию — сразу применить её на практике."
-];
+// === БЛОК 1: СЛОВАРЬ ПЕРЕВОДОВ ===
+const translations = {
+    ru: {
+        "about-title": "Обо мне",
+        "about-text": "Привет! Я начинающий веб-разработчик. Учусь с января 2026 года.",
+        "skills-title": "Мои навыки",
+        "languages-title": "Языки:",
+        "lang-ru": "Русский:",
+        "lang-ru-desc": "Родной язык",
+        "lang-tr": "Турецкий:",
+        "lang-tr-desc": "Разговорный / Изучаю",
+        "lang-en": "Английский:",
+        "lang-en-desc": "Начальный / Изучаю",
+        "projects-title": "Мои проекты",
+        "proj-1-title": "Проект 1: Перейти в мой Блог ✍️",
+        "proj-1-desc": "Создание блога с использованием HTML, CSS и JavaScript. (В процессе разработки, скоро появится)",
+        "proj-2-title": "Проект 2: Вебинар",
+        "proj-2-desc": "Форма регистрации на вебинар.",
+        "proj-3-title": "Проект 3: Интернет-магазин",
+        "proj-3-desc": "Разработка интернет-магазина с использованием Vue. (В процессе разработки, скоро появится)",
+        
+        "blog-welcome": "Добро пожаловать в мой блог! ✍️",
+        "blog-subtitle": "Здесь я делюсь своими мыслями и успехами в IT.",
+        "blog-back": "Назад на главную",
+        "blog-add-title": "Добавить новую запись",
+        "blog-placeholder-title": "Заголовок статьи",
+        "blog-placeholder-text": "Текст вашей статьи...",
+        "blog-publish-btn": "Опубликовать",
+        "blog-all-posts": "Все записи",
+        "blog-delete-btn": "Удалить"
+    },
+    en: {
+        "about-title": "About me",
+        "about-text": "Hello! I am a beginner web developer. I have been studying since January 2026.",
+        "skills-title": "My skills",
+        "languages-title": "Languages:",
+        "lang-ru": "Russian:",
+        "lang-ru-desc": "Native language",
+        "lang-tr": "Turkish:",
+        "lang-tr-desc": "Conversational / Learning",
+        "lang-en": "English:",
+        "lang-en-desc": "Beginner / Learning",
+        "projects-title": "My projects",
+        "proj-1-title": "Project 1: Go to my Blog ✍️",
+        "proj-1-desc": "Creating a blog using HTML, CSS and JavaScript. (Under development, coming soon)",
+        "proj-2-title": "Project 2: Webinar",
+        "proj-2-desc": "Registration form for a webinar.",
+        "proj-3-title": "Project 3: Online Store",
+        "proj-3-desc": "Developing an online store using Vue. (Under development, coming soon)",
+        
+        "blog-welcome": "Welcome to my blog! ✍️",
+        "blog-subtitle": "Here I share my thoughts and achievements in IT.",
+        "blog-back": "Back to home",
+        "blog-add-title": "Add a new post",
+        "blog-placeholder-title": "Article title",
+        "blog-placeholder-text": "Text of your article...",
+        "blog-publish-btn": "Publish",
+        "blog-all-posts": "All posts",
+        "blog-delete-btn": "Delete"
+    },
+    tr: {
+        "about-title": "Hakkımda",
+        "about-text": "Merhaba! Ben yeni başlayan bir web geliştiricisiyim. Ocak 2026'dan beri çalışıyorum.",
+        "skills-title": "Yeteneklerim",
+        "languages-title": "Diller:",
+        "lang-ru": "Rusça:",
+        "lang-ru-desc": "Ana dil",
+        "lang-tr": "Türkçe:",
+        "lang-tr-desc": "Konuşma / Öğreniyorum",
+        "lang-en": "İngilizce:",
+        "lang-en-desc": "Başlangıç / Öğreniyorum",
+        "projects-title": "Projelerim",
+        "proj-1-title": "Proje 1: Bloguma Git ✍️",
+        "proj-1-desc": "HTML, CSS ve JavaScript kullanarak bir blog oluşturma. (Yapım aşamasında, yakında gelecek)",
+        "proj-2-title": "Proje 2: Web semineri",
+        "proj-2-desc": "Bir web semineri için kayıt formu.",
+        "proj-3-title": "Proje 3: Çevrimiçi Mağaza",
+        "proj-3-desc": "Vue kullanarak bir çevrimiçi mağaza geliştirme. (Yapım aşamasında, yakında gelecek)",
+        
+        "blog-welcome": "Bloguma hoş geldiniz! ✍️",
+        "blog-subtitle": "Burada IT alanındaki düşüncelerimi ve başarılarımı paylaşıyorum.",
+        "blog-back": "Ana sayfaya geri dön",
+        "blog-add-title": "Yeni bir yazı ekle",
+        "blog-placeholder-title": "Makale başlığı",
+        "blog-placeholder-text": "Makalenizin metni...",
+        "blog-publish-btn": "Yayınla",
+        "blog-all-posts": "Tüm kayıtlar",
+        "blog-delete-btn": "Sil"
+    }
+};
 
-if (btn && message) {
-    btn.addEventListener('click', () => {
-        const randomIndex = Math.floor(Math.random() * tips.length);
-        message.textContent = tips[randomIndex];
+// === БЛОК 2: ЛОГИКА ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА ===
+window.changeLanguage = function(lang) {
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
     });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(`'${lang}'`)) {
+            btn.classList.add('active');
+        }
+    });
+    
+    localStorage.setItem('selected_language', lang);
 }
 
+// === БЛОК 3: ВАШ СТАРЫЙ КОД (СОВЕТЫ + БЛОГ) ===
+document.addEventListener('DOMContentLoaded', () => {
+    // Проверяем сохраненный язык при загрузке страницы
+    const savedLang = localStorage.getItem('selected_language') || 'ru';
+    window.changeLanguage(savedLang);
 
-// === КОД ДЛЯ БЛОГА С СОХРАНЕНИЕМ И УДАЛЕНИЕМ (Страница blog.html) ===
-const blogForm = document.getElementById('blog-form');
-const titleInput = document.getElementById('post-title'); 
-const textInput = document.getElementById('post-text');
-const postsContainer = document.getElementById('posts-container');
+    // Код для кнопки советов (Главная страница)
+    const btn = document.getElementById('magicBtn');
+    const message = document.getElementById('magicMessage');
+    const tips = [
+        "Пишите чистый код и не забывайте оставлять комментарии.",
+        "Регулярно делайте коммиты в Git, разделяя задачи.",
+        "Ошибки в консоли — это не провал, а инструмент поиска решений.",
+        "Лучший способ закрепить теорию — сразу применить её на практике."
+    ];
 
-if (blogForm) {
-    // Получаем массив сохраненных постов из памяти браузера
-    let savedPosts = JSON.parse(localStorage.getItem('myBlogPosts')) || [];
-
-    // ФУНКЦИЯ ДЛЯ ОТРИСОВКИ ОДНОГО ПОСТА С КНОПКОЙ УДАЛЕНИЯ
-    function renderPost(title, text, index) {
-        const newPost = document.createElement('div');
-        newPost.classList.add('post');
-        
-        // Вставляем текст и кнопку удаления. Кнопке даем индекс этого поста
-        newPost.innerHTML = `
-            <h3>${title}</h3>
-            <p>${text}</p>
-            <button class="delete-btn" data-index="${index}">Удалить</button>
-        `;
-        
-        // Находим кнопку удаления внутри только что созданного поста
-        const deleteBtn = newPost.querySelector('.delete-btn');
-        deleteBtn.addEventListener('click', function() {
-            // Удаляем пост из массива по его индексу
-            savedPosts.splice(index, 1);
-            // Перезаписываем обновленный массив в память
-            localStorage.setItem('myBlogPosts', JSON.stringify(savedPosts));
-            // Перерисовываем всю ленту заново, чтобы индексы обновились
-            refreshPosts();
-        });
-
-        postsContainer.insertBefore(newPost, postsContainer.firstChild);
-    }
-
-    // ФУНКЦИЯ ДЛЯ ПОЛНОЙ ПЕРЕРИСОВКИ ЛЕНТЫ
-    function refreshPosts() {
-        // Очищаем контейнер, кроме самого первого статичного поста, если нужно.
-        // Чтобы очистить абсолютно всё динамическое:
-        postsContainer.innerHTML = '';
-        
-        // Выводим каждый пост из памяти заново с правильными номерами (индексами)
-        savedPosts.forEach((post, idx) => {
-            renderPost(post.title, post.text, idx);
+    if (btn && message) {
+        btn.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            message.textContent = tips[randomIndex];
         });
     }
 
-    // Запускаем отрисовку сохраненных постов при первой загрузке страницы
-    refreshPosts();
+    // Код для блога с сохранением и удалением (Страница blog.html)
+    const blogForm = document.getElementById('blog-form');
+    const titleInput = document.getElementById('post-title');
+    const textInput = document.getElementById('post-text');
+    const postsContainer = document.getElementById('posts-container');
 
-    // ОБРАБОТКА ФОРМЫ (Публикация)
-    blogForm.addEventListener('submit', function(e) {
-        e.preventDefault(); 
+    if (blogForm) {
+        let savedPosts = JSON.parse(localStorage.getItem('myBlogPosts')) || [];
 
-        const titleValue = titleInput.value.trim();
-        const textValue = textInput.value.trim();
+        function renderPost(title, text, index) {
+            const newPost = document.createElement('div');
+            newPost.classList.add('post');
 
-        if (titleValue === "" || textValue === "") {
-            alert("Пожалуйста, заполните все поля!");
-            return;
+            // Текущий выбранный язык, чтобы кнопка удаления была на нужном языке
+            const currentLang = localStorage.getItem('selected_language') || 'ru';
+            const deleteBtnText = translations[currentLang]["blog-delete-btn"] || "Удалить";
+
+            newPost.innerHTML = `
+                <h3>${title}</h3>
+                <p>${text}</p>
+                <button class="delete-btn" data-i18n="blog-delete-btn" data-index="${index}">${deleteBtnText}</button>
+            `;
+
+            const deleteBtn = newPost.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', function() {
+                savedPosts.splice(index, 1);
+                localStorage.setItem('myBlogPosts', JSON.stringify(savedPosts));
+                refreshPosts();
+            });
+
+            postsContainer.insertBefore(newPost, postsContainer.firstChild);
         }
 
-        // Добавляем новый объект поста в наш массив
-        savedPosts.push({ title: titleValue, text: textValue });
-        // Сохраняем обновленный массив в localStorage
-        localStorage.setItem('myBlogPosts', JSON.stringify(savedPosts));
+        function refreshPosts() {
+            postsContainer.innerHTML = '';
+            savedPosts.forEach((post, idx) => {
+                renderPost(post.title, post.text, idx);
+            });
+        }
 
-        // Обновляем ленту на экране
         refreshPosts();
 
-        // Очищаем поля ввода
-        titleInput.value = "";
-        textInput.value = "";
-    });
-}
+        blogForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const titleValue = titleInput.value.trim();
+            const textValue = textInput.value.trim();
+
+            if (titleValue === "" || textValue === "") {
+                alert("Пожалуйста, заполните все поля!");
+                return;
+            }
+
+            savedPosts.push({ title: titleValue, text: textValue });
+            localStorage.setItem('myBlogPosts', JSON.stringify(savedPosts));
+            refreshPosts();
+
+            titleInput.value = "";
+            textInput.value = "";
+        });
+    }
+});

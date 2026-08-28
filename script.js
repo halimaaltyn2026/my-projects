@@ -1,4 +1,3 @@
-
 // === БЛОК 1: СЛОВАРЬ ПЕРЕВОДОВ ===
 const translations = {
     ru: {
@@ -19,6 +18,10 @@ const translations = {
         "proj-2-desc": "Форма регистрации на вебинар.",
         "proj-3-title": "Проект 3: Интернет-магазин",
         "proj-3-desc": "Разработка интернет-магазина с использованием Vue. (В процессе разработки, скоро появится)",
+        "proj-4-title": "Проект 4: Портфолио",
+        "proj-4-desc": "Создание страницы портфолио с использованием HTML и CSS.",
+        "proj-5-title": "Проект 5: Кофейня «Sweet & Coffee»",
+        "proj-5-desc": "Адаптивный сайт кофейни с меню, ценами и интерактивной формой быстрого заказа.",
         
         "blog-welcome": "Добро пожаловать в мой блог! ✍️",
         "blog-subtitle": "Здесь я делюсь своими мыслями и успехами в IT.",
@@ -48,6 +51,10 @@ const translations = {
         "proj-2-desc": "Registration form for a webinar.",
         "proj-3-title": "Project 3: Online Store",
         "proj-3-desc": "Developing an online store using Vue. (Under development, coming soon)",
+        "proj-4-title": "Project 4: Portfolio",
+        "proj-4-desc": "Creating a portfolio page using HTML and CSS.",
+        "proj-5-title": "Project 5: 'Sweet & Coffee' Coffee Shop",
+        "proj-5-desc": "Responsive coffee shop website with menu, prices and interactive quick order form.",
         
         "blog-welcome": "Welcome to my blog! ✍️",
         "blog-subtitle": "Here I share my thoughts and achievements in IT.",
@@ -77,6 +84,10 @@ const translations = {
         "proj-2-desc": "Bir web semineri için kayıt formu.",
         "proj-3-title": "Proje 3: Çevrimiçi Mağaza",
         "proj-3-desc": "Vue kullanarak bir çevrimiçi mağaza geliştirme. (Yapım aşamasında, yakında gelecek)",
+        "proj-4-title": "Proje 4: Portfolyo",
+        "proj-4-desc": "HTML ve CSS kullanarak bir portfolyo sayfası oluşturma.",
+        "proj-5-title": "Proje 5: «Sweet & Coffee» Kafe",
+        "proj-5-desc": "Menü, fiyatlar ve etkileşimli hızlı sipariş formu içeren duyarlı bir kahve dükkanı web sitesi.",
         
         "blog-welcome": "Bloguma hoş geldiniz! ✍️",
         "blog-subtitle": "Burada IT alanındaki düşüncelerimi ve başarılarımı paylaşıyorum.",
@@ -115,13 +126,12 @@ window.changeLanguage = function(lang) {
     localStorage.setItem('selected_language', lang);
 }
 
-// === БЛОК 3: ВАШ СТАРЫЙ КОД (СОВЕТЫ + БЛОГ) ===
+// === БЛОК 3: КОД СОВЕТОВ И БЛОГА ===
 document.addEventListener('DOMContentLoaded', () => {
-    // Проверяем сохраненный язык при загрузке страницы
     const savedLang = localStorage.getItem('selected_language') || 'ru';
     window.changeLanguage(savedLang);
 
-    // Код для кнопки советов (Главная страница)
+    // Кнопка советов
     const btn = document.getElementById('magicBtn');
     const message = document.getElementById('magicMessage');
     const tips = [
@@ -138,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Код для блога с сохранением и удалением (Страница blog.html)
+    // Блог с сохранением и удалением
     const blogForm = document.getElementById('blog-form');
     const titleInput = document.getElementById('post-title');
     const textInput = document.getElementById('post-text');
@@ -151,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const newPost = document.createElement('div');
             newPost.classList.add('post');
 
-            // Текущий выбранный язык, чтобы кнопка удаления была на нужном языке
             const currentLang = localStorage.getItem('selected_language') || 'ru';
             const deleteBtnText = translations[currentLang]["blog-delete-btn"] || "Удалить";
 

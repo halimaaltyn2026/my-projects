@@ -102,3 +102,34 @@
 .delete-btn:hover {
     background-color: #e60000;
 }
+
+/* Кнопки переключения языков */
+.lang-switcher {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.lang-btn {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0;
+}
+
+.lang-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}

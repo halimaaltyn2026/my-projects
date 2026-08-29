@@ -133,20 +133,30 @@
     color: white;
     border-color: #007bff;
 }
-/* Плавный переход для всех элементов при смене темы */
+
+/* Плавный переход для всех элементов */
 body {
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Стили для темной темы */
 body.dark-theme {
-    background-color: #121212; /* Глубокий темный фон */
-    color: #e0e0e0;            /* Светлый текст вместо черного */
+    background-color: #121214; /* Глубокий графитовый цвет */
+    color: #F3F4F6;            /* Мягкий белый текст */
 }
 
-/* Меняем цвет ссылок в темной теме, чтобы они оставались читаемыми */
+/* Твои любимые розовые ссылки на проекты! 🌸 */
 body.dark-theme a {
-    color: #bb86fc; 
+    color: #FF79C6;            
+    text-decoration: none;
+    border-bottom: 1px dashed #FF79C6; 
+    transition: color 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку */
+body.dark-theme a:hover {
+    color: #FF92D0;            
+    border-bottom: 1px solid #FF92D0;
 }
 
 /* Стили для самой кнопки */

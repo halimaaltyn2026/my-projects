@@ -209,3 +209,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+const btn = document.getElementById('theme-toggle');
+// 1. Проверяем сохраненную тему при загрузки страницы
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    if (btn) btn.textContent = 'Светлая тема';
+
+}
+// 2. Логика переключения по клику на кнопку 
+if (btn) {
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+            btn.textContent = 'Светлая тема';
+      } else {
+        localStorage.setItem('theme', 'light');
+        btn.textContent = 'Темная тема';
+      }
+    
+    });
+}

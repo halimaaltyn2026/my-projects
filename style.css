@@ -145,19 +145,20 @@ body.dark-theme {
     color: #F3F4F6;            /* Мягкий белый текст */
 }
 
-/* Твои любимые розовые ссылки на проекты! 🌸 */
+/* Твои любимые ярко-розовые ссылки, которые теперь не будут фиолетовыми! 🌸 */
 body.dark-theme a {
-    color: #FF79C6;            
-    text-decoration: none;
-    border-bottom: 1px dashed #FF79C6; 
+    color: #FF69B4 !important; /* Насыщенный розовый цвет */
+    text-decoration: none !important;
+    border-bottom: 1px dashed #FF69B4; 
     transition: color 0.3s ease;
 }
 
-/* Эффект при наведении на ссылку */
+/* Эффект при наведении */
 body.dark-theme a:hover {
-    color: #FF92D0;            
-    border-bottom: 1px solid #FF92D0;
+    color: #FFB6C1 !important; /* Нежно-розовый при нажатии */
+    border-bottom: 1px solid #FFB6C1;
 }
+
 
 /* Стили для самой кнопки */
 .theme-btn {

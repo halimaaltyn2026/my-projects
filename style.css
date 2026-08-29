@@ -133,3 +133,39 @@
     color: white;
     border-color: #007bff;
 }
+/* Плавный переход для всех элементов при смене темы */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Стили для темной темы */
+body.dark-theme {
+    background-color: #121212; /* Глубокий темный фон */
+    color: #e0e0e0;            /* Светлый текст вместо черного */
+}
+
+/* Меняем цвет ссылок в темной теме, чтобы они оставались читаемыми */
+body.dark-theme a {
+    color: #bb86fc; 
+}
+
+/* Стили для самой кнопки */
+.theme-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Вид кнопки, когда включена темная тема */
+body.dark-theme .theme-btn {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #555555;
+}
+

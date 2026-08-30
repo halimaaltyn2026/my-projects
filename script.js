@@ -90,11 +90,8 @@ const translations = {
         "proj-4-desc": "HTML ve CSS kullanarak bir portfolyo sayfası oluşturma.",
         "proj-5-title": "Proje 5: «Sweet & Coffee» Kafe",
         "proj-5-desc": "Menü, fiyatlar ve etkileşimli hızlı sipariş formu içeren duyarlı bir kahve dükkanı web sitesi.",
-        "proj-6-title: " Proje 6: Interaktif To-Do listem".,
+        "proj-6-title: "Proje 6: Interaktif To-Do listem".,
         "proj-6-desc": "Saf JavaScript ile oluşturulmuş etkileşimli bir yapılacaklar listesi.",
-
-        "proj-6-title: "Proje 6: Interaktif To-Do Listem",
-        "proj-6-desc": "Saf JavaScript ile olusturulmus etkilesimli bir yapilacaklar listesi.",
 
         "blog-welcome": "Bloguma hoş geldiniz! ✍️",
         "blog-subtitle": "Burada IT alanındaki düşüncelerimi ve başarılarımı paylaşıyorum.",

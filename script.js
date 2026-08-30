@@ -22,7 +22,8 @@ const translations = {
         "proj-4-desc": "Создание страницы портфолио с использованием HTML и CSS.",
         "proj-5-title": "Проект 5: Кофейня «Sweet & Coffee»",
         "proj-5-desc": "Адаптивный сайт кофейни с меню, ценами и интерактивной формой быстрого заказа.",
-        
+        "proj-6-title": "Проект 6: Мой интерактивный To-Do List",
+        "proj-6-desc": "Интерактивный список задач на чистом JavaScript.",
         "blog-welcome": "Добро пожаловать в мой блог! ✍️",
         "blog-subtitle": "Здесь я делюсь своими мыслями и успехами в IT.",
         "blog-back": "Назад на главную",
@@ -55,7 +56,8 @@ const translations = {
         "proj-4-desc": "Creating a portfolio page using HTML and CSS.",
         "proj-5-title": "Project 5: 'Sweet & Coffee' Coffee Shop",
         "proj-5-desc": "Responsive coffee shop website with menu, prices and interactive quick order form.",
-        
+        "proj-6-title": "Project 6: My Interactive To-Do List",
+        "proj-desc": "An interactive to-do list with pure JavaScript.",
         "blog-welcome": "Welcome to my blog! ✍️",
         "blog-subtitle": "Here I share my thoughts and achievements in IT.",
         "blog-back": "Back to home",
@@ -88,7 +90,8 @@ const translations = {
         "proj-4-desc": "HTML ve CSS kullanarak bir portfolyo sayfası oluşturma.",
         "proj-5-title": "Proje 5: «Sweet & Coffee» Kafe",
         "proj-5-desc": "Menü, fiyatlar ve etkileşimli hızlı sipariş formu içeren duyarlı bir kahve dükkanı web sitesi.",
-        
+        "proj-6-title: "roje 6: Interaktif To-Do Listem",
+        "proj-6-desc": "Saf JavaScript ile olusturulmus etkilesimli bir yapilacaklar listesi.",
         "blog-welcome": "Bloguma hoş geldiniz! ✍️",
         "blog-subtitle": "Burada IT alanındaki düşüncelerimi ve başarılarımı paylaşıyorum.",
         "blog-back": "Ana sayfaya geri dön",

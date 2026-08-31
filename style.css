@@ -189,7 +189,10 @@ body.dark-theme .theme-btn {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: inherit;
+    display: flex;
+flex-direction: column;
+align-items: center;
+ font-family: inherit;
 }
 
 /* Стили для заголовка */
@@ -200,8 +203,8 @@ body.dark-theme .theme-btn {
 
 /* Поле ввода */
 #taskInput {
-    width: 70%;
-    padding: 10px;
+    width: 100%;
+      padding: 10px;
     border: 2px solid #e0e0e0;
     border-radius: 6px;
     font-size: 1rem;
@@ -227,7 +230,9 @@ body.dark-theme .theme-btn {
 #addBtn {
     background-color: #2563eb;
     color: white;
-    margin-left: 5px;
+    margin-top: 12px;
+    width: 100%;
+
 }
 
 #addBtn:hover {

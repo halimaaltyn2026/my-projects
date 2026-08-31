@@ -210,6 +210,8 @@ align-items: center;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
+    box-sizing: border-box;
+
 }
 
 #taskInput:focus {
@@ -232,6 +234,7 @@ align-items: center;
     color: white;
     margin-top: 12px;
     width: 100%;
+    box-sizing: border-box;
 
 }
 

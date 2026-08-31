@@ -180,3 +180,82 @@ body.dark-theme .theme-btn {
     border-color: #555555;
 }
 
+/* === СТИЛИ ДЛЯ СТРАНИЦЫ TO-DO LIST === */
+.todo-app {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: inherit;
+}
+
+/* Стили для заголовка */
+.todo-app h2 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Поле ввода */
+#taskInput {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    border-color: #2563eb; /* Синий фокус при клике */
+}
+
+/* Общие стили для кнопок */
+.todo-app button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Кнопка "Добавить" */
+#addBtn {
+    background-color: #2563eb;
+    color: white;
+    margin-left: 5px;
+}
+
+#addBtn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Кнопка "Очистить всё" */
+#clearAllBtn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #ef4444; /* Приятный красный цвет вместо резкого */
+    color: white;
+}
+
+#clearAllBtn:hover {
+    background-color: #dc2626;
+}
+
+/* Кнопка активного действия при нажатии */
+.todo-app button:active {
+    transform: scale(0.98);
+}
+
+/* Ссылка возврата на главную */
+.todo-app a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}

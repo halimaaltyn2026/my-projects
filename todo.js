@@ -8,8 +8,9 @@ function saveTasks() {
     const tasks = [];
     document.querySelectorAll('#taskList li').forEach(li => {
         // Убираем текст кнопки "Х" из названия задачи
-        const text = li.childNodes[0].textContent;
-        const isCompleted = li.classList.contains('completed');
+        const text = li.firstChild.textContent.trim();
+
+      const isCompleted = li.classList.contains('completed');
         tasks.push({ text, completed: isCompleted });
     });
     localStorage.setItem('myTodoListTasks', JSON.stringify(tasks));

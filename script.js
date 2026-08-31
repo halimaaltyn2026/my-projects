@@ -191,7 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        refreshPosts();
+        if (blogForm) {
+    refreshPosts();
+}
+
 
         blogForm.addEventListener('submit', function(e) {
             e.preventDefault();

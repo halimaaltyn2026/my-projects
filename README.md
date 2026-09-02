@@ -106,5 +106,5 @@ Depoma hoş geldiniz! Burada Frontend Geliştirme öğrenirken yaptığım proje
 
   
 
-[![Flags](https://flagcounter.com)](https://flagcounter.com)
+
 

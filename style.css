@@ -267,3 +267,7 @@ align-items: center;
     text-decoration: none;
     font-weight: bold;
 }
+article h3 a, 
+article h3 a:visited {
+    color: #7b2cbf !important;
+}

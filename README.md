@@ -1,20 +1,3 @@
-
-# My Learning Projects 🚀
-
-[🇷🇺 Русский](#-список-проектов) | [🇬🇧 English](#-project-list) | [🇹🇷 Türkçe](#-proje-listesi)
-
----
-
-## 🇬🇧 English Description
-
-Welcome to my repository! Here I share the projects I have built while learning Frontend Development.
-
-### 🛠️ Technologies Used
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* Git & GitHub
-
 ### 📋 Project List
 1. ☕ **Sweet & Coffee**
    * **Description:** A responsive cafe website featuring a menu, pricing, and an interactive quick-order form.
@@ -25,21 +8,21 @@ Welcome to my repository! Here I share the projects I have built while learning 
 3. 👤 **Personal Portfolio**
    * **Description:** My personal page showcasing my skills, languages, and social links. Includes an interactive multi-language switcher (RU, EN, TR).
    * **Status:** In Progress
-4. 🛒 **E-Commerce Store (Coming Soon)**
+4. ✍️ **Personal Blog**
+   * **Description:** A simple blog site created with HTML, CSS, and JavaScript.
+   * **Status:** In Progress
+5. ✅ **Interactive To-Do List**
+   * **Description:** A task management web application built with pure JavaScript.
+   * **Status:** Completed
+6. 🔑 **Password Generator**
+   * **Description:** A secure password generator with customizable length and one-click copy to clipboard.
+   * **Status:** Completed
+7. 🛒 **E-Commerce Store (Coming Soon)**
    * **Description:** An online shop built with Vue.js.
    * **Status:** Planning
 
+
 ---
-
-## 🇷🇺 Описание на русском
-
-Добро пожаловать в мой репозиторий! Здесь я делюсь проектами, которые создаю в процессе изучения Frontend-разработки.
-
-### 🛠️ Используемые технологии
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* Git & GitHub
 
 ### 📋 Список проектов
 1. ☕ **Sweet & Coffee**
@@ -51,21 +34,22 @@ Welcome to my repository! Here I share the projects I have built while learning 
 3. 👤 **Личное портфолио**
    * **Описание:** Моя личная страница, демонстрирующая навыки, языки и ссылки на социальные сети. Включает интерактивное переключение языков (RU, EN, TR).
    * **Статус:** В процессе разработки
-4. 🛒 **Интернет-магазин (Скоро появится)**
+4. ✍️ **Личный блог**
+   * **Описание:** Простой сайт-блог, созданный с использованием HTML, CSS и JavaScript.
+   * **Статус:** В процессе разработки
+5. ✅ **Интерактивный To-Do List**
+   * **Описание:** Веб-приложение для управления задачами, созданное на чистом JavaScript.
+   * **Статус:** Завершен
+6. 🔑 **Генератор паролей**
+   * **Описание:** Генератор надёжных паролей с выбором длины и копированием в буфер обмена.
+   * **Статус:** Завершен
+7. 🛒 **Интернет-магазин (Скоро появится)**
    * **Описание:** Онлайн-магазин, созданный с использованием Vue.js.
    * **Статус:** Планирование
 
+
+
 ---
-
-## 🇹🇷 Türkçe Açıklama
-
-Depoma hoş geldiniz! Burada Frontend Geliştirme öğrenirken yaptığım projeleri paylaşıyorum.
-
-### 🛠️ Kullanılan Teknolojiler
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* Git & GitHub
 
 ### 📋 Proje Listesi
 1. ☕ **Sweet & Coffee**
@@ -77,9 +61,19 @@ Depoma hoş geldiniz! Burada Frontend Geliştirme öğrenirken yaptığım proje
 3. 👤 **Kişisel Portfolyo**
    * **Açıklama:** Becerilerimi, dillerimi ve sosyal bağlantılarımı gösteren kişisel sayfam. Etkileşimli çoklu dil seçeneği (RU, EN, TR) içerir.
    * **Durum:** Devam Ediyor
-4. 🛒 **E-Ticaret Mağazası (Yakında)**
+4. ✍️ **Kişisel Blog**
+   * **Açıklama:** HTML, CSS ve JavaScript ile oluşturulmuş basit bir blog sitesi.
+   * **Durum:** Devam Ediyor
+5. ✅ **Etkileşimli To-Do List**
+   * **Açıklama:** Saf JavaScript ile oluşturulmuş bir görev yönetim web uygulaması.
+   * **Durum:** Tamamlandı
+6. 🔑 **Şifre Oluşturucu**
+   * **Açıklama:** Özelleştirilebilir uzunluğa ve tek tıkla panoya kopyalama özelliğine sahip güvenli şifre oluşturucu.
+   * **Durum:** Tamamlandı
+7. 🛒 **E-Ticaret Mağazası (Yakında)**
    * **Açıklama:** Vue.js ile yapılmış bir çevrimiçi mağaza.
    * **Durum:** Planlama aşamasında
+
 
 
 ---
@@ -90,8 +84,8 @@ Depoma hoş geldiniz! Burada Frontend Geliştirme öğrenirken yaptığım proje
 - [x] **31 августа** — Основы TS: базовые типы данных.
 - [x] **1 сентября** — Изучила rest-параметры `...`, метод `.reduce()` и перегрузку функций. Прошла 5 уроков (80 страниц)! 🔥
 - [X] **2 сентября** — Профессия Frontend: Урок 1 + Практика.
-- [ ] **3 сентября** — TypeScript: Новый модуль / Углубление в типы.
-- [ ] **4 сентября** — Frontend Профессия: Изучение новой темы.
+- [X] **3 сентября** — TypeScript: Новый модуль / Углубление в типы.
+- [X] **4 сентября** — Frontend Профессия: Изучение новой темы.
 - [ ] **5 сентября** — TypeScript: Практические задачи.
 - [ ] **6 сентября** — Корректировка проектов в репозитории / Рефакторинг.
 - [ ] **7 сентября** — TypeScript: Новая тема.

@@ -20,6 +20,10 @@
 7. 🛒 **E-Commerce Store (Coming Soon)**
    * **Description:** An online shop built with Vue.js.
    * **Status:** Planning
+     
+8. 📇 **Developer Profile Card**
+   - **Description:** A stylish and responsive user profile card with a modern design, a smooth gradient border around the avatar, and clean hover animations.
+   - **Status:** Completed
 
 
 ---
@@ -77,6 +81,9 @@
    * **Açıklama:** Vue.js ile yapılmış bir çevrimiçi mağaza.
    * **Durum:** Planlama aşamasında
 
+8. 📇 **Geliştirici Profil Kartı**
+   - **Açıklama:** Modern tasarıma, avatar etrafında yumuşak gradyan çerçeveye ve pürüzsze hover efektlerine sahip, şık ve duyarlı bir kullanıcı profil kartı.
+   - **Durum:** Tamamlandı
 
 
 ---

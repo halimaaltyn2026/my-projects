@@ -105,49 +105,31 @@
     <footer>
         <p>&copy; 2026 Мое портфолио</p>
     </footer>
-
-<!-- Кнопка счётчика лайков (сохраняет клики в интернете) -->
+<!-- Изолированная локальная кнопка лайков -->
 <div style="text-align: center; margin: 20px;">
-  <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: #ff4757; color: white; border: none; transition: 0.2s;">
-    ❤️ Лайков: Загрузка...
+  <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: #ff4757; color: white; border: none;">
+    ❤️ Лайков: 0
   </button>
 </div>
 
 <script>
-  // Оборачиваем код в блок {}, чтобы изолировать переменные от остального сайта
   {
-    const GLOBAL_PROFILE_ID = "halimaaltyn2026"; 
-    const myLikeButtonElement = document.getElementById("likeBtn");
-
-    async function loadLikesFromServer() {
-      try {
-        const response = await fetch(`https://counterapi.dev{GLOBAL_PROFILE_ID}/likes`);
-        const data = await response.json();
-        myLikeButtonElement.textContent = `❤️ Лайков: ${data.count || 0}`;
-      } catch (error) {
-        myLikeButtonElement.textContent = `❤️ Лайков: 0`;
-      }
+    function createLocalCounter() {
+      let currentLikesCount = 0;
+      return function() {
+        currentLikesCount++;
+        return currentLikesCount;
+      };
     }
 
-    async function registerUserLikeHit() {
-      myLikeButtonElement.disabled = true; 
-      try {
-        const response = await fetch(`https://counterapi.dev{GLOBAL_PROFILE_ID}/likes/up`);
-        const data = await response.json();
-        myLikeButtonElement.textContent = `❤️ Лайков: ${data.count}`;
-      } catch (error) {
-        console.log("Ошибка сохранения лайка");
-      } finally {
-        myLikeButtonElement.disabled = false; 
-      }
-    }
+    const incrementLikes = createLocalCounter();
+    const targetLikeButton = document.getElementById("likeBtn");
 
-    loadLikesFromServer();
-    myLikeButtonElement.addEventListener("click", registerUserLikeHit);
+    targetLikeButton.addEventListener("click", function() {
+      targetLikeButton.textContent = `❤️ Лайков: ${incrementLikes()}`;
+    });
   }
 </script>
-
-
 
 </body>
 </html>

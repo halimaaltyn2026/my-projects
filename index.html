@@ -114,40 +114,39 @@
 </div>
 
 <script>
-  const ID_ПРОФИЛЯ = "halimaaltyn2026"; 
-  const button = document.getElementById("likeBtn");
+  // Оборачиваем код в блок {}, чтобы изолировать переменные от остального сайта
+  {
+    const GLOBAL_PROFILE_ID = "halimaaltyn2026"; 
+    const myLikeButtonElement = document.getElementById("likeBtn");
 
-  // 1. Функция загрузки лайков с сервера при открытии страницы
-  async function loadLikes() {
-    try {
-      const response = await fetch(`https://counterapi.dev{ID_ПРОФИЛЯ}/likes`);
-      const data = await response.json();
-      button.textContent = `❤️ Лайков: ${data.count || 0}`;
-    } catch (error) {
-      button.textContent = `❤️ Лайков: 0`;
+    async function loadLikesFromServer() {
+      try {
+        const response = await fetch(`https://counterapi.dev{GLOBAL_PROFILE_ID}/likes`);
+        const data = await response.json();
+        myLikeButtonElement.textContent = `❤️ Лайков: ${data.count || 0}`;
+      } catch (error) {
+        myLikeButtonElement.textContent = `❤️ Лайков: 0`;
+      }
     }
-  }
 
-  // 2. Функция клика (отправляет команду +1 на сервер)
-  async function hitLike() {
-    button.disabled = true; // Защита от спам-кликов
-    try {
-      const response = await fetch(`https://counterapi.dev{ID_ПРОФИЛЯ}/likes/up`);
-      const data = await response.json();
-      button.textContent = `❤️ Лайков: ${data.count}`;
-    } catch (error) {
-      console.log("Ошибка сохранения лайка");
-    } finally {
-      button.disabled = false; // Включаем кнопку обратно
+    async function registerUserLikeHit() {
+      myLikeButtonElement.disabled = true; 
+      try {
+        const response = await fetch(`https://counterapi.dev{GLOBAL_PROFILE_ID}/likes/up`);
+        const data = await response.json();
+        myLikeButtonElement.textContent = `❤️ Лайков: ${data.count}`;
+      } catch (error) {
+        console.log("Ошибка сохранения лайка");
+      } finally {
+        myLikeButtonElement.disabled = false; 
+      }
     }
+
+    loadLikesFromServer();
+    myLikeButtonElement.addEventListener("click", registerUserLikeHit);
   }
-
-  // Запускаем проверку лайков при старте страницы
-  loadLikes();
-
-  // Связываем кнопку с функцией клика
-  button.addEventListener("click", hitLike);
 </script>
+
 
 
 </body>

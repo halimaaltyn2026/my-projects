@@ -106,31 +106,49 @@
         <p>&copy; 2026 Мое портфолио</p>
     </footer>
 
-    <!-- Подключаем JavaScript файл -->
-    <script src="script.js"></script>
-<!-- Кнопка счётчика лайков на замыкании -->
+<!-- Кнопка счётчика лайков (сохраняет клики в интернете) -->
 <div style="text-align: center; margin: 20px;">
-  <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: #ff4757; color: white; border: none;">
-    ❤️ Лайков: 0
+  <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: #ff4757; color: white; border: none; transition: 0.2s;">
+    ❤️ Лайков: Загрузка...
   </button>
 </div>
 
 <script>
-  function createCounter() {
-    let count = 0;
-    return function() {
-      count++;
-      return count;
-    };
-  }
-
-  const updateLikes = createCounter();
+  const ID_ПРОФИЛЯ = "halimaaltyn2026"; 
   const button = document.getElementById("likeBtn");
 
-  button.addEventListener("click", function() {
-    button.textContent = `❤️ Лайков: ${updateLikes()}`;
-  });
+  // 1. Функция загрузки лайков с сервера при открытии страницы
+  async function loadLikes() {
+    try {
+      const response = await fetch(`https://counterapi.dev{ID_ПРОФИЛЯ}/likes`);
+      const data = await response.json();
+      button.textContent = `❤️ Лайков: ${data.count || 0}`;
+    } catch (error) {
+      button.textContent = `❤️ Лайков: 0`;
+    }
+  }
+
+  // 2. Функция клика (отправляет команду +1 на сервер)
+  async function hitLike() {
+    button.disabled = true; // Защита от спам-кликов
+    try {
+      const response = await fetch(`https://counterapi.dev{ID_ПРОФИЛЯ}/likes/up`);
+      const data = await response.json();
+      button.textContent = `❤️ Лайков: ${data.count}`;
+    } catch (error) {
+      console.log("Ошибка сохранения лайка");
+    } finally {
+      button.disabled = false; // Включаем кнопку обратно
+    }
+  }
+
+  // Запускаем проверку лайков при старте страницы
+  loadLikes();
+
+  // Связываем кнопку с функцией клика
+  button.addEventListener("click", hitLike);
 </script>
+
 
 </body>
 </html>

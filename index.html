@@ -105,7 +105,7 @@
     <footer>
         <p>&copy; 2026 Мое портфолио</p>
     </footer>
-<!-- Изолированная локальная кнопка лайков -->
+   <!-- Кнопка счётчика лайков на замыкании -->
 <div style="text-align: center; margin: 20px;">
   <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: #ff4757; color: white; border: none;">
     ❤️ Лайков: 0
@@ -113,23 +113,22 @@
 </div>
 
 <script>
-  {
-    function createLocalCounter() {
-      let currentLikesCount = 0;
-      return function() {
-        currentLikesCount++;
-        return currentLikesCount;
-      };
-    }
-
-    const incrementLikes = createLocalCounter();
-    const targetLikeButton = document.getElementById("likeBtn");
-
-    targetLikeButton.addEventListener("click", function() {
-      targetLikeButton.textContent = `❤️ Лайков: ${incrementLikes()}`;
-    });
+  function createCounter() {
+    let count = 0;
+    return function() {
+      count++;
+      return count;
+    };
   }
+
+  const updateLikes = createCounter();
+  const button = document.getElementById("likeBtn");
+
+  button.addEventListener("click", function() {
+    button.textContent = `❤️ Лайков: ${updateLikes()}`;
+  });
 </script>
+ 
 
 </body>
 </html>

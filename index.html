@@ -108,6 +108,30 @@
 
     <!-- Подключаем JavaScript файл -->
     <script src="script.js"></script>
+<!-- Кнопка счётчика лайков на замыкании -->
+<div style="text-align: center; margin: 20px;">
+  <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: #ff4757; color: white; border: none;">
+    ❤️ Лайков: 0
+  </button>
+</div>
+
+<script>
+  function createCounter() {
+    let count = 0;
+    return function() {
+      count++;
+      return count;
+    };
+  }
+
+  const updateLikes = createCounter();
+  const button = document.getElementById("likeBtn");
+
+  button.addEventListener("click", function() {
+    button.textContent = `❤️ Лайков: ${updateLikes()}`;
+  });
+</script>
+
 </body>
 </html>
 

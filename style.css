@@ -230,7 +230,7 @@ align-items: center;
 
 /* Кнопка "Добавить" */
 #addBtn {
-    background-color: #2563eb;
+    background-color: #A3E4D7;
     color: white;
     margin-top: 12px;
     width: 100%;
@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #1d4ed8;
+    background-color: #76D7C4;
 }
 
 /* Кнопка "Очистить всё" */
@@ -247,12 +247,12 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: #ef4444; /* Приятный красный цвет вместо резкого */
+    background-color: #F1948A; 
     color: white;
 }
 
 #clearAllBtn:hover {
-    background-color: #dc2626;
+    background-color: #E67E22;
 }
 
 /* Кнопка активного действия при нажатии */

@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #76D7C4;
+    background-color: #8ED0C3;
 }
 
 /* Кнопка "Очистить всё" */
@@ -252,7 +252,7 @@ align-items: center;
 }
 
 #clearAllBtn:hover {
-    background-color: #E67E22;
+    background-color: #F5B7B1;
 }
 
 /* Кнопка активного действия при нажатии */

@@ -247,7 +247,7 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: pink; 
+    background-color: pink !important; 
     color: #000000;
 }
 

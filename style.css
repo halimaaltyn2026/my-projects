@@ -231,7 +231,7 @@ align-items: center;
 /* Кнопка "Добавить" */
 #addBtn {
     background-color: #A3E4D7;
-    color: white;
+    color: black;
     margin-top: 12px;
     width: 100%;
     box-sizing: border-box;
@@ -247,8 +247,8 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: #F1948A; 
-    color: white;
+    background-color: #FADBD8; 
+    color: #000000;
 }
 
 #clearAllBtn:hover {

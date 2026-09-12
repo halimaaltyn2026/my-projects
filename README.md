@@ -7,10 +7,10 @@
    * **Status:** Completed
 3. 👤 **Personal Portfolio**
    * **Description:** My personal page showcasing my skills, languages, and social links. Includes an interactive multi-language switcher (RU, EN, TR).
-   * **Status:** In Progress
+    
 4. ✍️ **Personal Blog**
    * **Description:** A simple blog site created with HTML, CSS, and JavaScript.
-   * **Status:** In Progress
+     
 5. ✅ **Interactive To-Do List**
    * **Description:** A task management web application built with pure JavaScript.
    * **Status:** Completed
@@ -37,10 +37,10 @@
    * **Статус:** Завершен
 3. 👤 **Личное портфолио**
    * **Описание:** Моя личная страница, демонстрирующая навыки, языки и ссылки на социальные сети. Включает интерактивное переключение языков (RU, EN, TR).
-   * **Статус:** В процессе разработки
+     
 4. ✍️ **Личный блог**
    * **Описание:** Простой сайт-блог, созданный с использованием HTML, CSS и JavaScript.
-   * **Статус:** В процессе разработки
+     
 5. ✅ **Интерактивный To-Do List**
    * **Описание:** Веб-приложение для управления задачами, созданное на чистом JavaScript.
    * **Статус:** Завершен
@@ -67,10 +67,10 @@
    * **Durum:** Tamamlandı
 3. 👤 **Kişisel Portfolyo**
    * **Açıklama:** Becerilerimi, dillerimi ve sosyal bağlantılarımı gösteren kişisel sayfam. Etkileşimli çoklu dil seçeneği (RU, EN, TR) içerir.
-   * **Durum:** Devam Ediyor
+     
 4. ✍️ **Kişisel Blog**
    * **Açıklama:** HTML, CSS ve JavaScript ile oluşturulmuş basit bir blog sitesi.
-   * **Durum:** Devam Ediyor
+     
 5. ✅ **Etkileşimli To-Do List**
    * **Açıklama:** Saf JavaScript ile oluşturulmuş bir görev yönetim web uygulaması.
    * **Durum:** Tamamlandı

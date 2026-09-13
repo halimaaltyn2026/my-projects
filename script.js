@@ -2,7 +2,7 @@
 // === БЛОК 1: СЛОВАРЬ ПЕРЕВОДОВ ===
 const translations = {
   ru: {
-    "about-title": "Обо мне",
+    "about-title": "Моë портфолио",
     "about-text": "Привет! Я начинающий веб-разработчик. Учусь с января 2026 года.",
     "skills-title": "Мои навыки",
     "languages-title": "Языки:",
@@ -38,7 +38,7 @@ const translations = {
     "blog-delete-btn": "Удалить"
   },
   en: {
-    "about-title": "About me",
+    "about-title": "My portfolio",
     "about-text": "Hello! I am a beginner web developer. Learning since January 2026.",
     "skills-title": "My skills",
     "languages-title": "Languages:",
@@ -74,7 +74,7 @@ const translations = {
     "blog-delete-btn": "Delete"
   },
   tr: {
-    "about-title": "Hakkımda",
+    "about-title": "Portfolyom",
     "about-text": "Merhaba! Ben yeni başlayan bir web geliştiricisiyim. Ocak 2026'dan beri öğreniyorum.",
     "skills-title": "Yeteneklerim",
     "languages-title": "Diller:",

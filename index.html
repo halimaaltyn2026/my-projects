@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,65 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мое портфолио</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-      .skills-container {
-        max-width: 900px;
-        margin: 20px auto;
-      }
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 15px;
-        margin-top: 15px;
-      }
-      .skill-card {
-        border-radius: 12px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-      }
-      .status-completed { background-color: #e2f0d9; border: 1px solid #c5e1b5; }
-      .status-current { background-color: #e2effa; border: 1px solid #b9d7f2; }
-      .status-planned { background-color: #fce4d6; border: 1px solid #f8cbad; }
-      .skill-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .skill-badge {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 3px 8px;
-        border-radius: 15px;
-      }
-      .status-completed .skill-badge { background-color: #a9d18e; color: #375623; }
-      .status-current .skill-badge { background-color: #9bc2e6; color: #1f4e78; }
-      .status-planned .skill-badge { background-color: #f4b183; color: #843c0c; }
-      .skill-icon { font-size: 20px; }
-      .skill-name { font-size: 18px; font-weight: 700; color: #2c3e50; margin: 0 0 5px 0; }
-      .skill-desc { font-size: 13px; color: #5a6c7d; line-height: 1.4; margin: 0; }
-    </style>
 </head>
 <body>
 
     <!-- Шапка сайта и переключатель языков -->
     <div class="lang-switcher">
-        <button onclick="changeLanguage('ru')">RU</button>
-        <button onclick="changeLanguage('en')">EN</button>
-        <button onclick="changeLanguage('tr')">TR</button>
+        <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+        <button onclick="changeLanguage('tr')" class="lang-btn">TR</button>
     </div>
-
-    <!-- Кнопка переключения темы -->
-    <div class="theme-container" style="text-align: right; padding: 10px;">
-        <button id="theme-toggle" class="theme-btn">🌙</button>
-    </div>
+    
+<!-- Кнопка переключения темы -->
+<div class="theme-container" style="text-align: right; padding: 10px 20px;">
+    <button id="theme-toggle" class="theme-btn">🌙 Темная тема</button>
+</div>
 
     <header>
         <h1 data-i18n="about-title">Мое портфолио</h1>
+
         <nav>
             <a href="#about">Обо мне</a>
             <a href="#projects">Проекты</a>
@@ -73,92 +33,21 @@
     <!-- Основной блок с информацией -->
     <main id="about">
         <h2 data-i18n="about-title">Обо мне</h2>
-        <p data-i18n="about-text">Привет! Я начинающий веб-разработчик. Учусь с января.</p>
+        <p data-i18n="about-text">Привет! Я начинающий веб-разработчик. Учусь с января 2026 года.</p>
         
-        <div class="skills-container">
-            <h3 data-i18n="skills-title">Мои навыки</h3>
-            <div class="skills-grid">
-                
-                <div class="skill-card status-completed">
-                    <div class="skill-header">
-                        <span class="skill-badge">Пройдено</span>
-                        <span class="skill-icon">💛</span>
-                    </div>
-                    <h4 class="skill-name">JavaScript</h4>
-                    <p class="skill-desc">Изучены основы языка, интерактивность и работа с DOM.</p>
-                </div>
-
-                <div class="skill-card status-completed">
-                    <div class="skill-header">
-                        <span class="skill-badge">Пройдено</span>
-                        <span class="skill-icon">🧡</span>
-                    </div>
-                    <h4 class="skill-name">Git</h4>
-                    <p class="skill-desc">Контроль версий, фиксация изменений и работа с GitHub.</p>
-                </div>
-
-                <div class="skill-card status-completed">
-                    <div class="skill-header">
-                        <span class="skill-badge">Пройдено</span>
-                        <span class="skill-icon">💙</span>
-                    </div>
-                    <h4 class="skill-name">CSS3</h4>
-                    <p class="skill-desc">Создание стилей, адаптивная верстка и работа с сетками.</p>
-                </div>
-
-                <div class="skill-card status-completed">
-                    <div class="skill-header">
-                        <span class="skill-badge">Пройдено</span>
-                        <span class="skill-icon">❤️</span>
-                    </div>
-                    <h4 class="skill-name">HTML5</h4>
-                    <p class="skill-desc">Построение семантической структуры веб-страниц.</p>
-                </div>
-
-                <div class="skill-card status-current">
-                    <div class="skill-header">
-                        <span class="skill-badge">Изучаю</span>
-                        <span class="skill-icon">💻</span>
-                    </div>
-                    <h4 class="skill-name">Frontend</h4>
-                    <p class="skill-desc">Создание комплексных клиентских веб-приложений.</p>
-                </div>
-
-                <div class="skill-card status-current">
-                    <div class="skill-header">
-                        <span class="skill-badge">Изучаю</span>
-                        <span class="skill-icon">📘</span>
-                    </div>
-                    <h4 class="skill-name">TypeScript</h4>
-                    <p class="skill-desc">Интенсивный марафон по строгой типизации данных.</p>
-                </div>
-
-                <div class="skill-card status-planned">
-                    <div class="skill-header">
-                        <span class="skill-badge">В планах</span>
-                        <span class="skill-icon">💚</span>
-                    </div>
-                    <h4 class="skill-name">Vue.js</h4>
-                    <p class="skill-desc">Изучение фреймворка для реализации интернет-магазина.</p>
-                </div>
-
-                <div class="skill-card status-planned">
-                    <div class="skill-header">
-                        <span class="skill-badge">В планах</span>
-                        <span class="skill-icon">⚛️</span>
-                    </div>
-                    <h4 class="skill-name">React</h4>
-                    <p class="skill-desc">Освоение библиотеки для создания сложных интерфейсов.</p>
-                </div>
-
-            </div>
-        </div>
+        <h3 data-i18n="skills-title">Мои навыки</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
 
         <h3 data-i18n="languages-title">Языки:</h3>
         <ul>
-            <li><strong data-i18n="lang-ru">Русский:</strong> <span data-i18n="lang-ru-level">Родной</span></li>
-            <li><strong data-i18n="lang-tr">Турецкий:</strong> <span data-i18n="lang-tr-level">Разговорный</span></li>
-            <li><strong data-i18n="lang-en">Английский:</strong> <span data-i18n="lang-en-level">Базовый</span></li>
+            <li><strong data-i18n="lang-ru">Русский:</strong> <span data-i18n="lang-ru-desc">Родной язык</span></li>
+            <li><strong data-i18n="lang-tr">Турецкий:</strong> <span data-i18n="lang-tr-desc">Разговорный / Изучаю</span></li>
+            <li><strong data-i18n="lang-en">Английский:</strong> <span data-i18n="lang-en-desc">Начальный / Изучаю</span></li>
         </ul>
     </main>
 
@@ -167,84 +56,81 @@
         <h2 data-i18n="projects-title">Мои проекты</h2>
 
         <article>
-            <h3><a href="blog.html" data-i18n="proj-1-title">Проект 1: Личный блог</a></h3>
-            <p data-i18n="proj-1-desc">Создание блога с использованием HTML, CSS и JavaScript.</p>
+            <h3><a href="blog.html" data-i18n="proj-1-title">Проект 1: Перейти в мой Блог ✍️</a></h3>
+            <p data-i18n="proj-1-desc">Создание блога с использованием HTML, CSS и JavaScript. (В процессе разработки, скоро появится)</p>
         </article>
 
         <article>
             <h3><a href="webinar.html" data-i18n="proj-2-title">Проект 2: Вебинар</a></h3>
-            <p data-i18n="proj-2-desc">Форма регистрация на вебинар с валидацией данных.</p>
+            <p data-i18n="proj-2-desc">Форма регистрации на вебинар.</p>
         </article>
 
         <article>
             <h3><span data-i18n="proj-3-title">Проект 3: Интернет-магазин</span></h3>
-            <p data-i18n="proj-3-desc">Разработка internet-магазина с использованием Vue.js.</p>
+            <p data-i18n="proj-3-desc">Разработка internet-магазина с использованием Vue. (В процессе разработки, скоро появится)</p>
         </article>
 
         <article>
             <h3><span data-i18n="proj-4-title">Проект 4: Портфолио</span></h3>
-            <p data-i18n="proj-4-desc">Создание страницы портфолио с использованием технологий.</p>
+            <p data-i18n="proj-4-desc">Создание страницы портфолио с использованием HTML и CSS.</p>
         </article>
 
         <article>
-            <h3><a href="coffee.html" data-i18n="proj-5-title">Проект 5: Кофейня</a></h3>
-            <p data-i18n="proj-5-desc">Адаптивный сайт кофейни с меню, ценами и формой.</p>
+            <h3><a href="coffee.html" data-i18n="proj-5-title">Проект 5: Кофейня «Sweet & Coffee»</a></h3>
+            <p data-i18n="proj-5-desc">Адаптивный сайт кофейни с меню, ценами и интерактивной формой быстрого заказа.</p>
+        </article>
+        <article>
+           <h3><a href="todo.html" data-i18n="proj-6-title">Проект 6: Мой интерактивный To-Do List</a></h3>
+           <p data-i18n="proj-6-desc">Интерактивный список задач, созданный на чистом JavaScript.</p>
+       </article>
+        <article>
+           <h3><a href="password.html" data-i18n="proj-7-title">Проект 7: Генератор паролей</a></h3>
+          <p data-i18n="proj-7-desc">Генератор надёжных паролей с выбором длины и копированием в буфер обмена.</p>
+       </article>
+        <article>
+<h3><a href="profile.html" data-i18n="proj-8-title">Проект 8: Карточка профиля веб-разработчика</a></h3>
+<p data-i18n="proj-8-desc">Интерактивная карточка пользователя с современным дизайном, градиентной обводкой аватара и плавными эффектами наведения.</p>
         </article>
 
-        <article>
-            <h3><a href="todo.html" data-i18n="proj-6-title">Проект 6: Мой интерактивный To-Do List</a></h3>
-            <p data-i18n="proj-6-desc">Интерактивный список задач, созданный на чистом JavaScript.</p>
-        </article>
-
-        <article>
-            <h3><a href="password.html" data-i18n="proj-7-title">Проект 7: Генератор паролей</a></h3>
-            <p data-i18n="proj-7-desc">Генератор надёжных паролей с выбором длины и копированием.</p>
-        </article>
-
-        <article>
-            <h3><a href="profile.html" data-i18n="proj-8-title">Проект 8: Карточка профиля разработчика</a></h3>
-            <p data-i18n="proj-8-desc">Интерактивная карточка пользователя с современным дизайном.</p>
-        </article>
     </section>
 
     <!-- Подвал сайта -->
     <div style="text-align: center; margin: 30px 0;">
-        <button id="magicBtn" style="background-color: #2563eb; color: #ffffff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        <button id="magicBtn" style="background-color: #2563eb; color: #ffffff; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 500; border-radius: 6px; cursor: pointer;">
             Показать совет по продуктивности
         </button>
-        <p id="magicMessage" style="margin-top: 15px; font-size: 1rem; color: #4b5563; font-style: italic;"></p>
+        <p id="magicMessage" style="margin-top: 15px; font-size: 1rem; color: #000000; font-style: italic; font-weight: bold;"></p>
     </div>
 
     <footer>
         <p>&copy; 2026 Мое портфолио</p>
     </footer>
+   <!-- Кнопка счётчика лайков на замыкании -->
+<div style="text-align: center; margin: 20px;">
+  <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; cursor: pointer; background-color: pink; color: white; border: none;">
+    ❤️ Лайков: 0
+  </button>
+</div>
 
-    <!-- Кнопка счётчика лайков на замыкании -->
-    <div style="text-align: center; margin: 20px;">
-        <button id="likeBtn" style="padding: 10px 20px; font-size: 18px; border-radius: 8px; border: 1px solid #ccc; background-color: #fff; cursor: pointer;">
-            ❤️ Лайков: <span id="likeCount">0</span>
-        </button>
-    </div>
+<script>
+  function createCounter() {
+    let count = 0;
+    return function() {
+      count++;
+      return count;
+    };
+  }
 
-        <script>
-        function createCounter() {
-            let count = 0;
-            return function() {
-                count++;
-                return count;
-            };
-        }
-        const updateLikes = createCounter();
-        const button = document.getElementById("likeBtn");
-        const countSpan = document.getElementById("likeCount");
-        
-        if(button && countSpan) {
-            button.addEventListener("click", function() {
-                countSpan.textContent = updateLikes();
-            });
-        }
-    </script>
+  const updateLikes = createCounter();
+  const button = document.getElementById("likeBtn");
 
-    <script src="script.js"></script>
+  button.addEventListener("click", function() {
+    button.textContent = `❤️ Лайков: ${updateLikes()}`;
+  });
+</script>
+    
+ <script src="script.js"></script>
+
+
 </body>
 </html>

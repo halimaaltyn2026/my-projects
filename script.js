@@ -2,7 +2,7 @@
 // === БЛОК 1: СЛОВАРЬ ПЕРЕВОДОВ ===
 const translations = {
   ru: {
-    "about-title": "О мне",
+    "about-title": "Обо мне",
     "about-text": "Привет! Я начинающий веб-разработчик. Учусь с января 2026 года.",
     "skills-title": "Мои навыки",
     "languages-title": "Языки:",

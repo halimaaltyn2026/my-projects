@@ -18,8 +18,11 @@ lenInput.oninput = () => {
 
 // Функция выбора случайного символа из строки
 function getRandomChar(str) {
-    return str[Math.floor(Math.random() * str.length)];
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    return str[array[0] % str.length];
 }
+
 
 // Логика кнопки «Сгенерировать»
 genButton.onclick = () => {

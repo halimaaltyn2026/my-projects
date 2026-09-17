@@ -109,9 +109,11 @@
 - [ ] **30 сентября** — 🎉 ФИНИШ! TypeScript полностью пройден с закреплением!
 
   
-## 🛠 Технологии / Technologies
-* HTML5 / CSS3
-* JavaScript / TypeScript
+* 🟧 HTML5
+* 🟦 CSS3
+* 🟨 JavaScript
+* 🟦 TypeScript
+
 
 ## 💬 Связь со мной / Contact Me
 Если у вас есть вопросы по моим проектам или вы хотите дать совет по коду, пишите мне:

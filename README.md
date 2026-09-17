@@ -109,6 +109,10 @@
 - [ ] **30 сентября** — 🎉 ФИНИШ! TypeScript полностью пройден с закреплением!
 
   
+## 🛠 Технологии / Technologies
+![HTML5](https://shields.io) ![CSS3](https://shields.io) ![JavaScript](https://shields.io) ![TypeScript](https://shields.io)
 
-
+## 💬 Связь со мной / Contact Me
+Если у вас есть вопросы по моим проектам или вы хотите дать совет по коду, пишите мне:
+[Написать мне в Telegram](https://t.me/A_l_t_y_n) 
 

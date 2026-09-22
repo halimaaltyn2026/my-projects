@@ -1,49 +1,54 @@
-// 1. Создаем строгий тип для ролей
+
 type UserRole = 'admin' | 'user' | 'guest';
 
-// 2. Описываем структуру объекта пользователя
 interface User {
     id: number;
     name: string;
     role: UserRole;
-    email: string; // Сделаем email обязательным, раз мы его берем из формы
+    email: string;
 }
 
-// 3. Функция для создания приветственного сообщения
 function getWelcomeMessage(user: User): string {
-    if (user.role === 'admin') {
-        return `Добро пожаловать, Администратор ${user.name}! Доступ к панели открыт.`;
-    } else if (user.role === 'user') {
-        return `Привет, ${user.name}! Твой аккаунт (${user.email}) успешно авторизован.`;
-    } else {
-        return `Здравствуйте, Гость! Пожалуйста, проверьте данные.`;
+    switch (user.role) {
+        case 'admin':
+            return `Добро пожаловать, Администратор ${user.name}! Доступ к панели открыт.`;
+        case 'user':
+            return `Привет, ${user.name}! Твой аккаунт (${user.email}) успешно авторизован.`;
+        case 'guest':
+            return `Здравствуйте, Гость! Пожалуйста, проверьте данные.`;
+        default:
+            // Элегантная проверка на полноту без лишних переменных
+            return user.role satisfies never;
     }
 }
 
-// 4. Ваш рабочий код для формы
-const form = document.querySelector('form') as HTMLFormElement;
-const email = document.getElementById('email') as HTMLInputElement;
+const form = document.querySelector('form') as HTMLFormElement | null;
+const emailInput = document.getElementById('email') as HTMLInputElement | null;
 
-form.addEventListener('submit', (e: SubmitEvent) => {
-    e.preventDefault();
+if (form && emailInput) {
+    // Возвращаем точный SubmitEvent для доступа к e.submitter и другим свойствам
+    form.addEventListener('submit', (e: SubmitEvent) => {
+        e.preventDefault();
 
-    // Представим, что если почта admin@test.com, то заходит админ, а если любая другая — обычный юзер
-    let assignedRole: UserRole = 'user';
-    let userName = 'Пользователь';
+        const emailValue = emailInput.value.trim();
+        let assignedRole: UserRole = 'user';
+        let userName = 'Пользователь';
 
-    if (email.value === 'admin@test.com') {
-        assignedRole = 'admin';
-        userName = 'Халима (Админ)';
-    }
+        if (!emailValue) {
+            assignedRole = 'guest';
+            userName = 'Гость';
+        } else if (emailValue === 'admin@test.com') {
+            assignedRole = 'admin';
+            userName = 'Халима (Админ)';
+        }
 
-    // Создаем объект пользователя по нашему строгому интерфейсу User!
-    const currentUser: User = {
-        id: Date.now(), // Уникальный ID на основе времени
-        name: userName,
-        role: assignedRole,
-        email: email.value
-    };
+        const currentUser: User = {
+            id: Date.now(),
+            name: userName,
+            role: assignedRole,
+            email: emailValue
+        };
 
-    // Выводим сообщение, сгенерированное функцией
-    alert(getWelcomeMessage(currentUser));
-});
+        alert(getWelcomeMessage(currentUser));
+    });
+}

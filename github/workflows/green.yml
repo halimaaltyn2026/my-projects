@@ -22,3 +22,4 @@ jobs:
         git add .github/.build-status
         git commit -m "chore: automated code format and style cleanup"
         git push
+        git push origin master

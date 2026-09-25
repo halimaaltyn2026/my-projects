@@ -28,3 +28,48 @@ body {
     color: white;
     box-sizing: border-box;
 }
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.operator {
+    background-color: #ff9500;
+}
+
+.operator:hover {
+    background-color: #ffaa33;
+}
+
+.equals {
+    background-color: #4caf50;
+}
+
+.equals:hover {
+    background-color: #5fd863;
+}
+
+.clear {
+    background-color: #d9534f;
+    grid-column: span 1;
+}
+
+.clear:hover {
+    background-color: #e57373;
+}

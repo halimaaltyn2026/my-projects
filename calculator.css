@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     justify-content: center;
@@ -17,9 +18,10 @@ body {
 .calculator {
     background-color: #1c1c1c;
     padding: 20px;
-    border-radius: 15px; 
+    border-radius: 15px; /* Немного увеличили скругление для красоты */
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-    width: 90%;          /* На мобильных занимает 90% ширины экрана */
+    
+      width: 90%;          /* На мобильных занимает 90% ширины экрана */
     max-width: 400px;    /* На компьютерах не раздувается больше 400px */
 }
 
@@ -43,8 +45,8 @@ body {
 }
 
 .btn {
-
-  width: 100%;         /* Кнопка занимает всю ширину своей ячейки grid */
+    
+    width: 100%;         /* Кнопка занимает всю ширину своей ячейки grid */
     aspect-ratio: 1 / 1; /* Делает кнопки идеально квадратными на любых экранах */
     padding: 0;          /* Убираем жесткий padding, чтобы не ломать размеры */
     
@@ -61,10 +63,8 @@ body {
     align-items: center;
     
     /* Плавное изменение цвета при нажатии */
-    transition: background-color 0.1s ease; 
+    transition: background-color 0.1s ease;
 }
-
-/* Для кнопки «равно», если она растянута на 2 строки, или нуля, убираем квадратность */
 .equals, [style*="grid-column"] {
     aspect-ratio: auto;
     min-height: 60px; /* Минимальная высота для вытянутых кнопок */
@@ -75,26 +75,26 @@ body {
 }
 
 .operator {
-    background-color: #ff9500;
+    background-color: #3498db;
 }
 
 .operator:hover {
-    background-color: #ffaa33;
+    background-color:#2980b9 ;
 }
 
-.equals {
+.on {
     background-color: #4caf50;
 }
 
-.equals:hover {
+.on:hover {
     background-color: #5fd863;
 }
 
-.clear {
+.off {
     background-color: #d9534f;
     grid-column: span 1;
 }
 
-.clear:hover {
+.off:hover {
     background-color: #e57373;
 }

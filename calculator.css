@@ -5,7 +5,7 @@ body {
     align-items: center;
     min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
     margin: 0;
-    background-color: #2c2c2c;
+    background-color: #f4eade;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }

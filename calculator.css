@@ -17,10 +17,8 @@ body {
 .calculator {
     background-color: #1c1c1c;
     padding: 20px;
-    border-radius: 15px; /* Немного увеличили скругление для красоты */
+    border-radius: 15px; 
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-    
-    /* ИСПРАВЛЕНИЕ АДАПТИВНОСТИ: */
     width: 90%;          /* На мобильных занимает 90% ширины экрана */
     max-width: 400px;    /* На компьютерах не раздувается больше 400px */
 }

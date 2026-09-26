@@ -2,48 +2,74 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
     margin: 0;
     background-color: #2c2c2c;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Делаем все элементы адаптивными изначально */
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 .calculator {
     background-color: #1c1c1c;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 320px;
+    border-radius: 15px; /* Немного увеличили скругление для красоты */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    
+    /* ИСПРАВЛЕНИЕ АДАПТИВНОСТИ: */
+    width: 90%;          /* На мобильных занимает 90% ширины экрана */
+    max-width: 400px;    /* На компьютерах не раздувается больше 400px */
 }
 
 #display {
     width: 100%;
-    height: 60px;
-    font-size: 28px;
+    height: 70px;        /* Немного увеличили высоту */
+    font-size: 32px;     /* Увеличили шрифт для читаемости */
     text-align: right;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #333;
     color: white;
-    box-sizing: border-box;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 12px;           /* Чуть увеличили расстояние между кнопками */
 }
 
 .btn {
-    padding: 25px;
+    /* ИСПРАВЛЕНИЕ КНОПОК: */
+    width: 100%;         /* Кнопка занимает всю ширину своей ячейки grid */
+    aspect-ratio: 1 / 1; /* Делает кнопки идеально квадратными на любых экранах */
+    padding: 0;          /* Убираем жесткий padding, чтобы не ломать размеры */
+    
     font-size: 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #444;
     color: white;
     cursor: pointer;
+    
+    /* Центрируем текст внутри кнопки, так как убрали padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Плавное изменение цвета при нажатии */
+    transition: background-color 0.1s ease; 
+}
+
+/* Для кнопки «равно», если она растянута на 2 строки, или нуля, убираем квадратность */
+.equals, [style*="grid-column"] {
+    aspect-ratio: auto;
+    min-height: 60px; /* Минимальная высота для вытянутых кнопок */
 }
 
 .btn:hover {

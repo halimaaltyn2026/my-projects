@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
+    min-height: 100vh; 
     margin: 0;
     background-color: #f4eade;
     font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@ body {
 .calculator {
     background-color: #1c1c1c;
     padding: 20px;
-    border-radius: 15px; /* Немного увеличили скругление для красоты */
+    border-radius: 15px; 
     box-shadow: 0 12 40px rgba(0, 0, 0, 0.5);
 
 
@@ -29,7 +29,7 @@ body {
 
 #display {
     width: 100%;
-    height: 70px;        /* Немного увеличили высоту */
+    height: 70px;        
     font-size: 32px;     /* Увеличили шрифт для читаемости */
     text-align: right;
     padding: 15px;

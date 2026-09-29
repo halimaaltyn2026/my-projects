@@ -4,7 +4,7 @@
     max-width: 500px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #B0E0E6;
+    background-color: #F0FFF0;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -185,7 +185,7 @@ body.dark-theme .theme-btn {
     max-width: 400px;
     margin: 50px auto;
     padding: 25px;
-    background: #FFEFD5;
+    background: #F8F8FF;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;

@@ -19,7 +19,7 @@ body {
     background-color: #1c1c1c;
     padding: 20px;
     border-radius: 15px; /* Немного увеличили скругление для красоты */
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12 40px rgba(0, 0, 0, 0.5);
 
 
     

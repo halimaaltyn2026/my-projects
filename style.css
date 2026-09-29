@@ -147,15 +147,15 @@ body.dark-theme {
 
 /* Ярко-розовые ссылки, которые теперь не будут фиолетовыми! 🌸 */
 body.dark-theme a {
-    color: #DA70D6 !important; /* Насыщенный розовый цвет */
-    text-decoration: none !important;
+    color: #DA70D6; /* Насыщенный розовый цвет */
+    text-decoration: none;
     border-bottom: 1px dashed #FF69B4; 
     transition: color 0.3s ease;
 }
 
 /* Эффект при наведении */
 body.dark-theme a:hover {
-    color: #FFB6C1 !important; /* Нежно-розовый при нажатии */
+    color: #FFB6C1; /* Нежно-розовый при нажатии */
     border-bottom: 1px solid #FFB6C1;
 }
 
@@ -230,7 +230,7 @@ align-items: center;
 
 /* Кнопка "Добавить" */
 #addBtn {
-    background-color: #B39DDB;
+    background-color: #9370DB;
     color: black;
     margin-top: 12px;
     width: 100%;
@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #9575CD;
+    background-color: #7B68EE;
 }
 
 /* Кнопка "Очистить всё" */
@@ -247,12 +247,12 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: 5C768D !important; 
+    background-color: #00C4CC; 
     color: #000000;
 }
 
 #clearAllBtn:hover {
-    backgroubackground-color: 4A6175;
+    backgroubackground-color: #00A3A8;
 }
 
 /* Кнопка активного действия при нажатии */
@@ -269,5 +269,5 @@ align-items: center;
 }
 article h3 a, 
 article h3 a:visited {
-    color: #7b2cbf !important;
+    color: #7b2cbf;
 }

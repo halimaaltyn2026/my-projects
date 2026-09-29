@@ -42,7 +42,7 @@
 #blog-form button {
     width: 100%;
     padding: 12px;
-    background-color: #00FF00;
+    background-color: #00FA9A;
     color: white;
     border: none;
     border-radius: 8px;
@@ -53,7 +53,7 @@
 }
 
 #blog-form button:hover {
-    background-color: #0056b3;
+    background-color: #00FF00;
 }
 
 #blog-form button:active {
@@ -109,7 +109,7 @@
     gap: 8px;
     justify-content: flex-end;
     padding: 10px 20px;
-    background-color: #f9f9f9;
+    background-color: #00BFFF;
     border-bottom: 1px solid #ddd;
 }
 
@@ -147,7 +147,7 @@ body.dark-theme {
 
 /* Ярко-розовые ссылки, которые теперь не будут фиолетовыми! 🌸 */
 body.dark-theme a {
-    color: #FF69B4 !important; /* Насыщенный розовый цвет */
+    color: #DA70D6 !important; /* Насыщенный розовый цвет */
     text-decoration: none !important;
     border-bottom: 1px dashed #FF69B4; 
     transition: color 0.3s ease;
@@ -230,7 +230,7 @@ align-items: center;
 
 /* Кнопка "Добавить" */
 #addBtn {
-    background-color: #00FFFF;
+    background-color: #EE82EE;
     color: black;
     margin-top: 12px;
     width: 100%;
@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #8ED0C3;
+    background-color: #00FFFF;
 }
 
 /* Кнопка "Очистить всё" */
@@ -247,12 +247,12 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: #FF00FF !important; 
+    background-color: #00CED1 !important; 
     color: #000000;
 }
 
 #clearAllBtn:hover {
-    background-color: #F5B7B1;
+    background-color: #FF00FF;
 }
 
 /* Кнопка активного действия при нажатии */

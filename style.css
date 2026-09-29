@@ -42,7 +42,7 @@
 #blog-form button {
     width: 100%;
     padding: 12px;
-    background-color: #66CDAA;
+    background-color: #87C4A3;
     color: white;
     border: none;
     border-radius: 8px;
@@ -53,7 +53,7 @@
 }
 
 #blog-form button:hover {
-    background-color: #48D1CC;
+    background-color: #6FB38E;
 }
 
 #blog-form button:active {
@@ -230,7 +230,7 @@ align-items: center;
 
 /* Кнопка "Добавить" */
 #addBtn {
-    background-color: #DA70D6;
+    background-color: #B39DDB;
     color: black;
     margin-top: 12px;
     width: 100%;
@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #DDA0DD;
+    background-color: #9575CD;
 }
 
 /* Кнопка "Очистить всё" */

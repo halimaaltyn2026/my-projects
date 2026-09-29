@@ -185,7 +185,7 @@ body.dark-theme .theme-btn {
     max-width: 400px;
     margin: 50px auto;
     padding: 25px;
-    background: #F8F8FF;
+    background: #FFF0F5;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -230,7 +230,7 @@ align-items: center;
 
 /* Кнопка "Добавить" */
 #addBtn {
-    background-color: #9370DB;
+    background-color: #DA70D6;
     color: black;
     margin-top: 12px;
     width: 100%;
@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #7B68EE;
+    background-color: #DDA0DD;
 }
 
 /* Кнопка "Очистить всё" */
@@ -247,12 +247,12 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: #00C4CC; 
+    background-color: #20B2AA; 
     color: #000000;
 }
 
 #clearAllBtn:hover {
-    backgroubackground-color: #00A3A8;
+    backgroubackground-color: #66CDAA;
 }
 
 /* Кнопка активного действия при нажатии */

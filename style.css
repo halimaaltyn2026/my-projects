@@ -247,12 +247,12 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: #5F9EAO !important; 
+    background-color: 5C768D !important; 
     color: #000000;
 }
 
 #clearAllBtn:hover {
-    background-color: #66CDAA;
+    backgroubackground-color: 4A6175;
 }
 
 /* Кнопка активного действия при нажатии */

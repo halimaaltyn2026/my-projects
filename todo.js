@@ -3,7 +3,7 @@ const addBtn = document.querySelector('#addBtn');
 const clearAllBtn = document.querySelector('#clearAllBtn');
 const taskList = document.querySelector('#taskList');
 
-// Функция, которая собирает все задачи с экрана и сохраняет их в память телефона
+// Функция, которая собирает все задачи с экрана и сохраняет их в память телефона. 
 function saveTasks() {
     const tasks = [];
     document.querySelectorAll('#taskList li').forEach(li => {

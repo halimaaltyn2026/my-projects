@@ -20,7 +20,12 @@ function calculateDiscount(price: number, discount: number): DiscountResult {
 }
 
 // 3. Функция для проверки ошибок (валидации)
-function validateInput(price: number, discount: number): string | null {
+function validateInput(price: number | undefined | null, discount: number | undefined | null): string | null {
+    // Проверяем на пустой ввод
+    if (price === undefined || price === null || discount === undefined || discount === null) {
+        return "Ошибка: Поля не могут быть пустыми!";
+    }
+
     if (isNaN(price) || isNaN(discount)) {
         return "Ошибка: Введенные данные должны быть числами!";
     }

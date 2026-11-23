@@ -5,6 +5,7 @@
    * **Status:** CCompleted
 2. 📝 **Webinar Registration Form**
    * **Description:** A clean and modern registration form with input validation.
+   * * **Live Demo:** [Webinar Registration Form](https://halimaaltyn2026.github.io/my-projects/webinar/)
    * **Status:** Completed
 3. 👤 **Personal Portfolio**
    * **Description:** My personal page showcasing my skills, languages, and social links. Includes an interactive multi-language switcher (RU, EN, TR).
@@ -32,6 +33,7 @@
 ### 📋 Список проектов
 1. ☕ **Sweet & Coffee**
    * **Описание:** Адаптивный сайт кофейни с меню, ценами и интерактивной формой быстрого заказа.
+   * **Live Demo:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
    * **Статус:** Завершен
 2. 📝 **Форма регистрации на вебинар**
    * **Описание:** Чистая и современная форма регистрации с валидацией введенных данных.
@@ -62,6 +64,7 @@
 ### 📋 Proje Listesi
 1. ☕ **Sweet & Coffee**
    * **Açıklama:** Menü, fiyatlar ve etkileşimli hızlı sipariş formu içeren duyarlı bir kafe web sitesi.
+   * **Live Demo:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
    * **Durum:** Tamamlandı
 2. 📝 **Web Semineri Kayıt Formu**
    * **Açıklama:** Giriş doğrulaması içeren temiz ve modern bir kayıt formu.

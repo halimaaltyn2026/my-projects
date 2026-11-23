@@ -1,7 +1,8 @@
 ### 📋 Project List
 1. ☕ **Sweet & Coffee**
    * **Description:** A responsive cafe website featuring a menu, pricing, and an interactive quick-order form.
-   * **Status:** Completed
+   * **Live Demo:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
+ * **Status:** CCompleted
 2. 📝 **Webinar Registration Form**
    * **Description:** A clean and modern registration form with input validation.
    * **Status:** Completed

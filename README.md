@@ -33,11 +33,11 @@
 ### 📋 Список проектов
 1. ☕ **Sweet & Coffee**
    * **Описание:** Адаптивный сайт кофейни с меню, ценами и интерактивной формой быстрого заказа.
-   * **Live Demo:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
+   * **Демо:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
    * **Статус:** Завершен
 2. 📝 **Форма регистрации на вебинар**
    * **Описание:** Чистая и современная форма регистрации с валидацией введенных данных.
-   * * **Live Demo:** [Webinar Registration Form](https://halimaaltyn2026.github.io/my-projects/webinar/)
+   * * **Демо:** [Webinar Registration Form](https://halimaaltyn2026.github.io/my-projects/webinar/)
    * **Статус:** Завершен
 3. 👤 **Личное портфолио**
    * **Описание:** Моя личная страница, демонстрирующая навыки, языки и ссылки на социальные сети. Включает интерактивное переключение языков (RU, EN, TR).
@@ -65,11 +65,11 @@
 ### 📋 Proje Listesi
 1. ☕ **Sweet & Coffee**
    * **Açıklama:** Menü, fiyatlar ve etkileşimli hızlı sipariş formu içeren duyarlı bir kafe web sitesi.
-   * **Live Demo:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
+   * **Canlı önizleme:** [Sweet & Coffee](https://halimaaltyn2026.github.io/my-projects/coffee-shop/)
    * **Durum:** Tamamlandı
 2. 📝 **Web Semineri Kayıt Formu**
    * **Açıklama:** Giriş doğrulaması içeren temiz ve modern bir kayıt formu.
-   * * **Live Demo:** [Webinar kayıt formuormu](https://halimaaltyn2026.github.io/my-projects/webinar/)
+   * * **Canlı önizleme:** [Webinar kayıt formuormu](https://halimaaltyn2026.github.io/my-projects/webinar/)
    * **Durum:** Tamamlandı
 3. 👤 **Kişisel Portfolyo**
    * **Açıklama:** Becerilerimi, dillerimi ve sosyal bağlantılarımı gösteren kişisel sayfam. Etkileşimli çoklu dil seçeneği (RU, EN, TR) içerir.

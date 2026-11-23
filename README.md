@@ -9,6 +9,8 @@
    * **Status:** Completed
 3. 👤 **Personal Portfolio**
    * **Description:** My personal page showcasing my skills, languages, and social links. Includes an interactive multi-language switcher (RU, EN, TR).
+    * **Live Demo:** [Personal Portfolio](https://halimaaltyn2026.github.io/my-projects/)
+
     
 4. ✍️ **Personal Blog**
    * **Description:** A simple blog site created with HTML, CSS, and JavaScript.
@@ -41,7 +43,8 @@
    * **Статус:** Завершен
 3. 👤 **Личное портфолио**
    * **Описание:** Моя личная страница, демонстрирующая навыки, языки и ссылки на социальные сети. Включает интерактивное переключение языков (RU, EN, TR).
-     
+    * **Live Demo:** [Портфолио](https://halimaaltyn2026.github.io/my-projects/)
+
 4. ✍️ **Личный блог**
    * **Описание:** Простой сайт-блог, созданный с использованием HTML, CSS и JavaScript.
      
@@ -73,7 +76,8 @@
    * **Durum:** Tamamlandı
 3. 👤 **Kişisel Portfolyo**
    * **Açıklama:** Becerilerimi, dillerimi ve sosyal bağlantılarımı gösteren kişisel sayfam. Etkileşimli çoklu dil seçeneği (RU, EN, TR) içerir.
-     
+   * **Live Demo:** [Kişisel Portfolio](https://halimaaltyn2026.github.io/my-projects/)
+
 4. ✍️ **Kişisel Blog**
    * **Açıklama:** HTML, CSS ve JavaScript ile oluşturulmuş basit bir blog sitesi.
      
@@ -89,11 +93,9 @@
 
 8. 📇 **Geliştirici Profil Kartı**
    - **Açıklama:** Modern tasarıma, avatar etrafında yumuşak gradyan çerçeveye ve pürüzsze hover efektlerine sahip, şık ve duyarlı bir kullanıcı profil kartı.
-   - **Durum:** Tamamlandı
+   - **Durum:** meA
 
 ## 💬 Связь со мной / Contact Me
 Если у вас есть вопросы по моим проектам или вы хотите дать совет по коду, пишите мне:
 [Написать мне на почту](mailto:altynhalima25@mail.ru)
-
-
-
+[Написать мне на телеграм](https://t.me/A_l_t_y_n)

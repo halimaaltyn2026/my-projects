@@ -69,7 +69,7 @@
    * **Durum:** Tamamlandı
 2. 📝 **Web Semineri Kayıt Formu**
    * **Açıklama:** Giriş doğrulaması içeren temiz ve modern bir kayıt formu.
-   * * **Canlı önizleme:** [Webinar kayıt formuormu](https://halimaaltyn2026.github.io/my-projects/webinar/)
+   * * **Canlı önizleme:** [Webinar kayıt formu](https://halimaaltyn2026.github.io/my-projects/webinar/)
    * **Durum:** Tamamlandı
 3. 👤 **Kişisel Portfolyo**
    * **Açıklama:** Becerilerimi, dillerimi ve sosyal bağlantılarımı gösteren kişisel sayfam. Etkileşimli çoklu dil seçeneği (RU, EN, TR) içerir.

@@ -93,9 +93,10 @@
 
 8. 📇 **Geliştirici Profil Kartı**
    - **Açıklama:** Modern tasarıma, avatar etrafında yumuşak gradyan çerçeveye ve pürüzsze hover efektlerine sahip, şık ve duyarlı bir kullanıcı profil kartı.
-   - **Durum:** meA
+   - **Durum:** Tamamlandı
 
 ## 💬 Связь со мной / Contact Me
 Если у вас есть вопросы по моим проектам или вы хотите дать совет по коду, пишите мне:
 [Написать мне на почту](mailto:altynhalima25@mail.ru)
-[Написать мне на телеграм](https://t.me/A_l_t_y_n)
+
+[Написать мне на телеграм](https://t.me/A_t_t_y_n)

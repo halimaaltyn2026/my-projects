@@ -76,7 +76,7 @@
    * **Durum:** Tamamlandı
 3. 👤 **Kişisel Portfolyo**
    * **Açıklama:** Becerilerimi, dillerimi ve sosyal bağlantılarımı gösteren kişisel sayfam. Etkileşimli çoklu dil seçeneği (RU, EN, TR) içerir.
-   * **Live Demo:** [Kişisel Portfolio](https://halimaaltyn2026.github.io/my-projects/)
+   * **Canlı önizleme:** [Kişisel Portfolio](https://halimaaltyn2026.github.io/my-projects/)
 
 4. ✍️ **Kişisel Blog**
    * **Açıklama:** HTML, CSS ve JavaScript ile oluşturulmuş basit bir blog sitesi.

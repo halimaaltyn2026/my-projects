@@ -177,7 +177,7 @@ body.dark-theme a:hover {
 body.dark-theme .theme-btn {
     background-color: #333333;
     color: #ffffff;
-    border-color: #555555;
+    border-color: #e0b7dd;
 }
 
 /* === СТИЛИ ДЛЯ СТРАНИЦЫ TO-DO LIST === */
@@ -185,7 +185,7 @@ body.dark-theme .theme-btn {
     max-width: 400px;
     margin: 50px auto;
     padding: 25px;
-    background: #E6E6FA;
+    background: #e2c9f7;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -230,7 +230,7 @@ align-items: center;
 
 /* Кнопка "Добавить" */
 #addBtn {
-    background-color: #DA70D6;
+    background-color: #ff8cd3;
     color: black;
     margin-top: 12px;
     width: 100%;
@@ -239,7 +239,7 @@ align-items: center;
 }
 
 #addBtn:hover {
-    background-color: #DDA0DD;
+    background-color: #f578f5;
 }
 
 /* Кнопка "Очистить всё" */
@@ -247,11 +247,11 @@ align-items: center;
     display: block;
     width: 100%;
     margin-top: 15px;
-    background-color: #20B2AA !important; 
+    background-color: #5bdbd5 !important; 
     color: #000000;
 }
 #clearAllBtn:hover {
-    background-color: #008B8B !important; 
+    background-color: #65bebe !important; 
     color: #000000;
 
 }
